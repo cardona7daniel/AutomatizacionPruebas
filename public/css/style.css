@@ -6,6 +6,12 @@
 
 img{
     margin: 2% 5%;
+    transition: .5s;
+}
+
+img:hover{
+    transition: .5s;
+    transform: scale(.5);
 }
 
 
@@ -36,6 +42,10 @@ h1#h1App{
     margin-right: 20px;
 }
 
+.continuar{
+    margin-right: 20px;
+}
+
 
 .bordeImg{
     border-right: solid white 1px;
@@ -50,9 +60,10 @@ a.separador{
     
 }
 
-a#eliminar{
+a.eliminar{
     color: red;
-    }
+    cursor:pointer;
+}
 
 div.container{
     margin-top: 4%;

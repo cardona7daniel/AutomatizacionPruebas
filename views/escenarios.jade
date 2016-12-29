@@ -10,7 +10,7 @@ block content
                     button.close(type='button', data-dismiss='modal', aria-label='Close')
                         span(aria-hidden='true') &times;
 
-                    h4.modal-title ADVERTENCIA
+                    h4.modal-title.text-danger ADVERTENCIA
 
                 .modal-body
                     p ¿Está seguro de eliminar este escenario?
@@ -24,6 +24,10 @@ block content
         div#form
             form(action='/crearescenario', method='get')
                 input.btn.btn-primary.newApp(value='Nuevo Escenario', type='submit')
+            form(action='/pasos', method='get')
+                input.btn.btn-success.continuar(value='Continuar', type='submit')
+            form(action='/', method='get')
+                input.btn.btn-info(value='Regresar', type='submit')
 
         table#tablaApp.table
             thead
@@ -35,12 +39,12 @@ block content
             tbody
                 tr
                     td
-                        button.btn.btn-default(type='submit' formmethod='post' formaction='/play')
+                        button.btn.btn-default(id='#', type='submit', data-toggle="tooltip", title="Iniciar")
                             span.glyphicon.glyphicon-play.text-primary.align-center
 
-                    td Crear Usuario
+                    td Crear
                     td http://localhost:3000/get/post
                     td
                         a.separador(href='/editarescenario') Editar
-                        a#eliminar(data-toggle='modal', data-target='#modal') Eliminar
+                        a.eliminar(data-toggle='modal', data-target='#modal') Eliminar
 
